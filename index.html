@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공비서 - 회원/매출/고객관리 프로그램(네일샵, 미용실 등)</title>
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <link rel="stylesheet" href="/assets/FlexSlider/flexslider.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header include-html="/template/elements/header.html"></header>
+    <div id="container">
+        <div class="side-bar" include-html="/template/elements/sideBar.html"></div>
+        <div class="content">
+            <h2>우리샵 앨범</h2>
+            <div class="view-filter">
+                <ul>
+                    <li class="filter-active" onclick="viewFilter('album')">앨범</li>
+                    <li onclick="viewFilter('month')">이달의 아트</li>
+                </ul>
+            </div>
+            <div class="add-new">
+                <button type="button" id="btnAddArt">
+                    새로운 아트 등록
+                </button>
+            </div>
+            <div id="contentView" class="content-view" include-html="/template/viewAlbum.html"></div>
+            <div class="pagenation" include-html="/template/elements/pagenation.html"></div>
+        </div>
+    </div>
+    <footer include-html="/template/elements/footer.html"></footer>
+    <div id="albumModal" include-html="/template/albumModal.html" class="album-modal modal"></div>
+    <div id="addArtModal" include-html="/template/addArtModal.html" class="add-art-modal modal"></div>
+    <div id="widget" include-html="/template/reserveWidget.html"></div>
+    <script src="/assets/js/lib/jquery-3.6.0.min.js"></script>
+    <script src="/assets/FlexSlider/jquery.flexslider.js"></script>
+    <script src="/assets/js/includeHTML.js"></script>
+    <script src="/assets/js/index.js"></script>
+    <script>
+        includeHTML(function () {
+            makeCalendar()
+        });
+    </script>
+</body>
+</html>

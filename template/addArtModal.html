@@ -1,0 +1,133 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <span>
+            아트 등록
+        </span>
+        <button type="button" id="btnCloseModal" class="btn-close-modal">
+            상세창 닫기
+        </button>
+    </div>
+    <div class="modal-body">
+        <input type="file" id="addImg" name="addimg" class="hidden" accept="image/jpeg,image/gif,image/png">
+        <label for="addImg" class="add-img-label">
+            <i class="fas fa-plus-circle"></i>
+            이미지 찾아보기
+        </label>
+        <ul id="preview" class="preview">
+        </ul>
+        <table class="add-info">
+            <tbody>
+                <tr>
+                    <td class="td-title">아트명</td>
+                    <td>
+                        <input type="text" placeholder="아트명 입력">
+                        <span>
+                            * 필수
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-title">가격</td>
+                    <td>
+                        <input type="number" placeholder="가격 입력">
+                        원
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-title">회원 가격</td>
+                    <td>
+                        <input type="number" placeholder="회원 가격 입력">
+                        원
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-title">시술 시간</td>
+                    <td>
+                        <select name="hours" id="selectH">
+                            <option value="0">0시간</option>
+                            <option value="1" selected>1시간</option>
+                            <option value="2">2시간</option>
+                            <option value="3">3시간</option>
+                        </select>
+                        <select name="minute" id="selectM">
+                            <option value="0" selected>0분</option>
+                            <option value="30">30분</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="add-app">
+            <p>
+                <strong>
+                    이 아트를 네일아트앱에 등록
+                </strong>
+                카테고리 등록시 앱 내 홍보가 가능합니다
+            </p>
+            <div class="switch-box">
+                <label class="switch">
+                    <input type="checkbox" id="btnSwitch">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="select-style-box hidden">
+                <div>
+                    <ul class="cate">
+                        <li class="style-active">형태</li>
+                        <li>컬러</li>
+                        <li>디자인</li>
+                        <li>컨셉</li>
+                    </ul>
+                    <ul class="style style01">
+                        <li>라운드 스퀘어</li>
+                        <li>라운드</li>
+                        <li>오발(뾰족)</li>
+                        <li>짧은 손톱</li>
+                        <li>연장</li>
+                        <li>패디</li>
+                    </ul>
+                    <ul class="style style02 hidden">
+                        <li>화이트</li>
+                        <li>블랙</li>
+                        <li>베이지</li>
+                        <li>레드</li>
+                        <li>핑크</li>
+                        <li>실버</li>
+                        <li>옐로우&골드</li>
+                        <li>그린</li>
+                    </ul>
+                    <ul class="style style03 hidden">
+                        <li>라인</li>
+                        <li>도트</li>
+                        <li>프렌치</li>
+                        <li>패턴&체크</li>
+                        <li>그라데이션</li>
+                        <li>글리터&필름</li>
+                        <li>호피</li>
+                        <li>캐릭터</li>
+                    </ul>
+                    <ul class="style style04 hidden">
+                        <li>심플</li>
+                        <li>큐트</li>
+                        <li>러블리</li>
+                        <li>웨딩</li>
+                        <li>연예인</li>
+                        <li>화려한</li>
+                        <li>비비드</li>
+                        <li>유니트</li>
+                    </ul>
+                </div>
+                <div class="style-selected">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button">
+            취소
+        </button>
+        <button type="button">
+            등록
+        </button>
+    </div>
+</div>

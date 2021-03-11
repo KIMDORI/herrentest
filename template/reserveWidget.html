@@ -1,0 +1,90 @@
+<div class="reserve-widget">
+    <div class="reserve-widget-open">
+        <div class="widget-header">
+            <h3>
+                예약현황
+            </h3>
+            <ul class="filter">
+                <li class="filter-active">오늘</li>
+                <li>날짜별</li>
+            </ul>
+            <button type="button" id="btnWidgetClose" class="btn-close-widget">
+                위젯 접기
+            </button>
+        </div>
+        <div class="widget-body">
+            <div class="reserve-today">
+                <nav>
+                    <ul>
+                        <li class="nav-active">전체(0)</li>
+                        <li>예약(0)</li>
+                        <li>시술중(0)</li>
+                        <li>매출완료(0)</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="reserve-date hidden">
+                <div>
+                    <ul id="calendar" class="calendar">
+                    </ul>
+                    <button type="button" class="btn-date-prev" onclick="moveDate('prev')">
+                        이전
+                    </button>
+                    <button type="button" class="btn-date-next" onclick="moveDate('next')">
+                        다음
+                    </button>
+                </div>
+                <ul class="day-reserve-list">
+                    <li>
+                        <div class="time">
+                            <strong>
+                                09:30
+                            </strong>
+                        </div>
+                        <div class="info">
+                            <p class="customer">
+                                김고객(눈썹>자연 눈썹)
+                            </p>
+                            <p class="status">
+                                <span>
+                                    예약중
+                                </span>
+                                담당자
+                            </p>
+                            <button type="button" class="btn-edit">
+                                예약 정보 수정
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="time">
+                            <strong>
+                                11:30
+                            </strong>
+                        </div>
+                        <div class="info">
+                            <p class="customer">
+                                윤고객(눈썹>남자 눈썹)
+                            </p>
+                            <p class="status">
+                                <span>
+                                    예약중
+                                </span>
+                                담당자
+                            </p>
+                            <button type="button" class="btn-edit">
+                                예약 정보 수정
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="widget-footer">
+            <div class="pagenation" include-html="/template/elements/pagenation.html"></div>
+        </div>
+    </div>
+</div>
+<div class="reserve-widget-close hidden" id="btnWidgetOpen">
+    위젯 열기
+</div>

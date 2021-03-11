@@ -1,0 +1,744 @@
+@charset "utf-8";
+
+body {
+    background-color:#f5f7f7;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body header {
+    height:32px;
+    line-height:33px;
+    background-color:#fff;
+    border-bottom:1px solid #d9e6e8;
+}
+#container,
+header .wrap {
+    width:1100px;
+    margin:0 auto;
+}
+#container {
+    position: relative;
+}
+
+/* header */
+header .wrap * {
+    display:inline-block;
+}
+header h1 {
+    display:inline-block;
+    padding: 0 19px;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #d9e6e8;
+    font-weight:bold;
+    color:#bbb;
+}
+header .go-store {
+    color:#18292e;
+}
+header .go-store span {
+    display: inline-block;
+    width: 16px;
+    height: 14px;
+    margin:0 3px 0 10px;
+    line-height: 16px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #3fdcdb;
+    color: #fff;
+    font-size: 10px;
+}
+header .go-store > i {
+    padding-left:5px;
+    font-size:11px;
+}
+header .header-menu {
+    float:right;
+}
+header .header-menu li {
+    margin:0 5px;
+    color:#bbb;
+    font-size:11px;
+}
+header .header-menu li:nth-child(2) {
+    color:red;
+}
+header .alarm {
+    position: relative;
+    float:right;
+    padding:0 8px;
+    margin-left:15px;
+    border-width:0 1px;
+    border-style:solid;
+    border-color:#d9e6e8;
+    font-size:11px;
+}
+header .alarm button {
+    background-color:transparent;
+    font-weight:bold;
+    color:#3a5965;
+}
+header .alarm span {
+    position: absolute;
+    bottom:-10px;
+    right:12px;
+    width:23px;
+    height:18px;
+    border-radius:30px;
+    text-align:center;
+    line-height:20px;
+    color:#fff;
+    font-weight:bold;
+    font-size:11px;
+    background:linear-gradient(#3fdcdb, #4ab0e3);
+}
+
+/* side-bar */
+.side-bar {
+    position: absolute;
+    left:0;
+}
+.side-bar nav,
+.side-bar .shop-profile,
+.side-bar .shop-album {
+    width:160px;
+}
+.side-bar nav {
+    padding:15px 0;
+    border:1px solid #d9e6e8;
+    background-color:#fff;
+}
+.side-bar nav ul {
+    padding-left:20px;
+}
+.side-bar nav li {
+    line-height:20px;
+    font-size:13px;
+}
+.side-bar nav li.list-active {
+    color:#3fd2d1;
+}
+.side-bar nav li:hover {
+    color:#3fd2d1;
+    cursor: pointer;
+}
+.side-bar nav li.list-header {
+    margin-top:20px;
+    font-size:15px;
+    font-weight:bold;
+}
+.side-bar .shop-profile {
+    padding-top:35px;
+    background:linear-gradient(to right, #3fdcdb, #4ab0e3);
+    color:#fff;
+}
+.side-bar .shop-profile .shop-name {
+    padding:0 20px;
+    color:#fff;
+    font-size:20px;
+    font-weight:bold;
+}
+.side-bar strong {
+    margin-right:8px;
+}
+.side-bar .manager {
+    margin-top:35px;
+    padding:0 20px 10px;
+    border-bottom:1px solid rgba(0, 0, 0, 0.1);
+    font-size:13px;
+}
+.side-bar .staff {
+    padding:10px 20px;
+    font-size:13px;
+}
+.side-bar .staff strong {
+    margin-right:15px;
+}
+.side-bar .staff span {
+    float:right;
+    margin-top:5px;
+}
+.side-bar .staff-list {
+    display: inline-block;
+}
+.side-bar .staff-list li {
+    display:inline-block;
+    width:24px;
+    height:24px;
+    margin-left:-8px;
+    border-radius: 50%;
+    background-color:#ddd;
+    border:1px solid #bbb;
+    vertical-align: middle;
+}
+.side-bar .shop-album {
+    display: inline-block;
+    margin:5px 0;
+    padding:15px 20px;
+    border:1px solid #d9e6e8;
+    background-color:#f9f9fb;
+    font-size:13px;
+    font-weight:bold;
+    color:#718c96;
+}
+.side-bar .shop-album i {
+    float:right;
+    font-size: 15px;
+    margin-top: -2px;
+}
+
+
+/* content */
+.content {
+    margin-left:190px;
+    padding-top:30px;
+}
+.content h2 {
+    margin-bottom:45px;
+    color:#37454a;
+    font-size:25px;
+    font-weight:bold;
+}
+.content .view-filter li {
+    display:inline-block;
+    margin-right:20px;
+    padding-bottom:3px;
+    font-size:15px;
+    font-weight: bold;
+    color:#bad0d3;
+    cursor: pointer;
+}
+.content .view-filter .filter-active {
+    border-bottom:3px solid #3fd2d1;
+    color:#37454a;
+}
+.content .add-new {
+    margin:30px 0 15px;
+    color:#37454a;
+    font-size:25px;
+    text-align:center;
+}
+.content .add-new button {
+    padding:10px 0 10px 53px;
+    background:url('../img/icon/circle-plus.png') no-repeat 0 5px;
+    cursor: pointer;
+}
+
+/* 우리샵 앨범 - 앨범 */
+.view-album .album {
+    position: relative;
+    display:inline-block;
+    width:195px;
+    margin:20px 10px 0px 0;
+    font-weight:bold;
+    color:#fff;
+    cursor:pointer;
+}
+.view-album .album-photo {
+    text-align:center;
+    line-height:200px;
+}
+.view-album .album img {
+    max-width:100%;
+    max-height:200px;
+    vertical-align: middle;
+}
+.view-album .album-info {
+    width:100%;
+    height:100px;
+    padding:30px 15px 10px;
+    background-color:rgba(0, 0, 0, 0.7);
+}
+.view-album .album .time {
+    margin:5px 0 20px;
+    color:#a2a1a0;
+}
+.view-album .album .price-for-member {
+    float:right;
+    color:#a2a1a0;
+}
+.view-album .img-cnt {
+    position: absolute;
+    top:10px;
+    right:10px;
+    padding-left:15px;
+    background:url('../img/icon/image-count.png') no-repeat;
+}
+
+/* 우리샵 앨범 - 이달의 아트 */
+.month-list > li {
+    margin-bottom:10px;
+    padding:20px 15px;
+    border:1px solid #ddd;
+    background-color:#fff;
+}
+.month-list > li:first-child {
+    margin-top:25px;
+}
+.month-list p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.month-list img {
+    max-width:200px;
+    max-height:200px;
+    margin-right:10px;
+}
+.month-list .img-list {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.month-list .img-list > li {
+    display:inline-block;
+}
+
+/* pagenation */
+.pagenation {
+    font-weight:bold;
+    text-align:center;
+}
+.pagenation i {
+    margin:0 12px;
+    color:#3fdcdb;
+}
+.content .pagenation {
+    padding:30px 0;
+}
+
+/* modal */
+.modal {
+    display:none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width:100%;
+    height:100vh;
+    background-color:rgba(0, 0, 0, 0.3)
+}
+.modal .modal-content {
+    position: absolute;
+    left:50%;
+    top:120px;
+    margin-left:-300px;
+    width:600px;
+    background-color:#fff;
+}
+.modal .modal-header {
+    padding:15px 10px;
+}
+.modal .modal-body .img-slide-box {
+    position:relative;
+    width:340px;
+    height:500px;
+    margin:73px auto;
+}
+.modal .modal-header span {
+    padding-left:10px;
+    color:#3fdcdb;
+    font-size:18px;
+    font-weight:bold;
+}
+.modal .btn-close-modal {
+    float:right;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background:url('../img/icon/cross-large.png') no-repeat;
+    text-indent: -99999999px;
+}
+.modal-footer button {
+    float:left;
+    width:50%;
+    height:50px;
+    font-size:16px;
+    font-weight: bold;
+}
+.modal-footer button:first-child {
+    background-color:#fff;
+    color:#969ea0;
+}
+.modal-footer button:last-child {
+    background-color:#29373b;
+    color:#fff;
+}
+
+/* 예약현황 위젯 */
+.reserve-widget {
+    position: fixed;
+    top: 55px;
+    right: 35px;
+    width: 250px;
+    border-radius:12px;
+    box-shadow:0px 2px 10px #d9e6e8;
+}
+.reserve-widget .widget-header {
+    padding:13px 15px;
+    background-color:#364549;
+    border-radius:10px 10px 0 0;
+    color:#fff;
+}
+.widget-header ul,
+.widget-header li {
+    display:inline-block;
+}
+.widget-header ul {
+    margin-left:10px;
+    border:1px solid #fff;
+    border-radius:20px;
+}
+.widget-header li {
+    padding:6px 9px 4px 7px;
+    text-align:center;
+    font-size:10px;
+    font-weight: bold;
+    cursor:pointer;
+}
+.widget-header li.filter-active {
+    background-color:#fff;
+    color:#364549;
+    border-radius:20px;
+}
+.widget-header .btn-close-widget {
+    float:right;
+    margin-top: 5px;
+    background-color:transparent;
+    background:url('../img/icon/ic-close-white.png') no-repeat;
+    text-indent: -99999px;
+}
+.widget-header h3 {
+    display: inline-block;;
+    font-size:14px;
+    vertical-align: middle;
+}
+.reserve-widget .widget-body {
+    background-color:#fff;
+}
+.widget-body nav {
+    border-bottom:1px solid #d9e6e8;
+}
+.widget-body nav li {
+    display:inline-block;
+    width:calc(25% - 5px);
+    padding:12px 0px 10px;
+    color:#87969c;
+    text-align:center;
+    font-size:11px;
+    cursor:pointer;
+}
+.widget-body nav li.nav-active {
+    color:#364549;
+    border-bottom:2px solid #364549;
+    font-weight:bold;
+}
+.reserve-widget .widget-footer {
+    padding:13px 0;
+    background-color:#f5f7f7;
+    border-top:1px solid #d9e6e8;
+    border-radius:0 0 12px 12px;
+}
+.reserve-date > div:first-child {
+    position: relative;
+    padding:18px 20px 13px;
+    text-align:center;
+}
+.reserve-date .calendar li {
+    display:inline-block;
+    width: 40px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #aeb8bc;
+    cursor:pointer;
+}
+.reserve-date .calendar li.sat {
+    color:#92c6f3;
+}
+.reserve-date .calendar li.sun {
+    color:#ff9a9a;
+}
+.reserve-date .calendar > li:nth-child(3):not(.sat, .sun){
+    color:#000;
+}
+.reserve-date .calendar > li:nth-child(3).sat {
+    color:#004dff;
+}
+.reserve-date .calendar > li:nth-child(3).sun {
+    color:red;
+}
+.reserve-date .calendar p.day {
+    margin-bottom:5px;
+    font-size:12px;
+}
+.reserve-date button:not(.btn-edit) {
+    position: absolute;
+    top: 50%;
+    margin-top:-10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-indent:-9999px;
+    border: 1px solid #bbb;
+    background-color: #fff;
+    background:url('../img/icon/ic-calendar-arrow.png') no-repeat #fff 6px;
+}
+.reserve-date .btn-edit {
+    float:right;
+    width:25px;
+    height:25px;
+    margin-top: -12px;
+    border-radius:50%;
+    background:url('../img/icon/ic-edit-pen.png') no-repeat #ebecec 50%;
+    text-indent: -9999px;
+}
+.reserve-date .btn-date-prev {
+    left:-10px;
+}
+.reserve-date .btn-date-next {
+    right:-10px;
+    transform: rotate(180deg);
+}
+.reserve-widget-close {
+    position: fixed;
+    top: 55px;
+    right: 35px;
+    width:45px;
+    height:45px;
+    background:url('../img/icon/ic-calendar-pop.png') no-repeat #364549 11px 13px;
+    border-radius:10px;
+    text-indent:-9999px;
+    cursor:pointer;
+}
+.day-reserve-list li {
+    border-top:1px solid #d9e6e8;
+}
+.day-reserve-list li > div {
+    display:inline-block;
+}
+.day-reserve-list li .time {
+    width: 72px;
+    margin: 15px 0px;
+    padding: 0 15px;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    border-right: 1px solid #aeb8bc;
+    color: #aeb8bc;
+}
+.day-reserve-list li .time strong {
+    font-size:13px;
+    color:#000;
+}
+.day-reserve-list li .info {
+    width: calc(100% - 77px);
+    padding: 10px;
+    line-height:18px
+}
+.day-reserve-list .info p {
+    display:inline-block;
+}
+.day-reserve-list .status {
+    color:#aeb8bc;
+}
+.day-reserve-list .status span {
+    color:#3fd2d1;
+}
+
+/* 아트 등록 모달 */
+.add-app > p {
+    display:inline-block;
+    padding:15px;
+    line-height:15px;
+}
+.add-app > p strong {
+    display:block;
+}
+.add-art-modal .modal-content {
+    width:450px;
+    margin-left:-225px;
+    background-color:#f7f9fb;
+}
+.add-art-modal .add-img-label {
+    display: block;
+    margin: 20px 30px 30px;
+    cursor: pointer;
+    text-align: center;
+}
+.add-art-modal .add-img-label i {
+    margin-right:5px;
+}
+.add-art-modal .modal-body .preview {
+    padding-right:20px;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+.add-art-modal .preview li {
+    display:inline-block;
+    max-width:100px;
+    margin-left: 25px;
+    margin-bottom:20px;
+    vertical-align:middle
+}
+.add-art-modal .preview li img {
+    max-width: 100%;
+    max-height: 120px;
+}
+.add-art-modal .modal-body .add-info {
+    width:100%;
+    border-top:2px solid #000;
+    background-color:#fff;
+}
+.add-art-modal .add-info tr {
+    border-bottom:1px solid #d9e6e8;
+}
+.add-art-modal .add-info td.td-title {
+    background-color:#f9fbfb;
+    font-weight:bold;
+    font-size:13px;
+}
+.add-art-modal .add-info td {
+    padding:14px 15px 13px;
+}
+.add-art-modal .add-info tr:first-child span {
+    color:red;
+}
+.add-art-modal .add-info input,
+.add-art-modal .add-info select {
+    border:none;
+}
+.add-art-modal .select-style-box > div:first-child {
+    overflow:hidden;
+    padding:0px 15px 15px;
+}
+.select-style-box ul li {
+    padding:12px;
+    border-bottom:1px solid #d9e6e8;
+    cursor:pointer;
+}
+.add-art-modal ul.cate {
+    float:left;
+    width:140px;
+    border:1px solid #d9e6e8;
+    border-right:none;
+    background-color:#f2f6f7;
+}
+.add-art-modal ul.cate li.style-active {
+    background-color:#fff;
+}
+.add-art-modal ul.style {
+    float:left;
+    width:calc(100% - 140px);
+    height:149px;
+    border:1px solid #d9e6e8;
+    border-left:none;
+    background-color:#fff;
+}
+.add-art-modal ul.style li {
+    float: left;
+    width: 50%;
+    background-color:#fff;
+}
+.add-art-modal ul.cate li:last-child,
+.add-art-modal ul.style li:nth-child(7),
+.add-art-modal ul.style li:nth-child(8) {
+    border-bottom:none;
+}
+.add-art-modal .style-selected {
+    padding: 0 15px 10px;
+}
+.add-art-modal .style-selected span {   
+    display:inline-block;
+    padding:5px 8px;
+    margin:5px 5px 0 0;
+    border:1px solid #d9e6e8;
+    background-color:#fff;
+}
+.add-art-modal .style-selected button {   
+    width:17px;
+    background: url(../img/icon/cross.png) no-repeat 7px 3px;
+    text-indent: -9999px;
+}
+
+/* 스위치 버튼 */
+.switch-box {
+    float:right;
+    margin:16px;
+}
+.switch-box .switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 26px;
+    vertical-align:middle;
+}
+.switch-box .switch input {
+    display:none;
+}
+.switch-box .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.switch-box .slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.switch-box input:checked + .slider {
+    background-color: #5ee4e2;
+}
+.switch-box input:focus + .slider {
+    box-shadow: 0 0 1px #5ee4e2;
+}
+.switch-box input:checked + .slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+}
+.switch-box .slider.round {
+    border-radius: 34px;
+}
+.switch-box .slider.round:before {
+    border-radius: 50%;
+}
+
+/* footer */
+footer {
+    background-color:#e9eded;
+    border-top:1px solid #d9e6e8;
+}
+footer div {
+    width:1100px;
+    margin:0 auto;
+    padding:50px 0;
+}
+footer ul:first-child {
+    margin-bottom:20px;
+}
+footer li {
+    display:inline-block;
+    padding:0 15px;
+    color:#969ea1;
+    border-right:1px solid #ccc;
+    font-size:12px;
+}
+footer li:last-child {
+    border-right:0;
+}
+
+
+/* 기타 */
+.hidden {
+    display:none;
+}
+
